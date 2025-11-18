@@ -8,6 +8,6 @@ prof_codigos
 # Temporariamente ignorar a pasta de componentes e arquivos de entrada do frontend.
 # Observação: esses itens serão removidos deste .gitignore no futuro quando
 # o frontend for reorganizado ou passado para um repositório separado.
-frontend-calculadora/components/
+frontend-calculadora/**/components/
 frontend-calculadora/App.tsx
 frontend-calculadora/main.tsx
