@@ -1,6 +1,6 @@
-import { JurosSimples } from "../frontend-calculadora/src/core/JurosSimples";
-import { MENSAGENS_ERRO } from "../frontend-calculadora/src/core/constants/MensagensErro";
-import { EntradasTempo, EntradasTaxa, EntradasCapital, EntradasJuros, EntradasMontante } from "../frontend-calculadora/src/core/Util/InterfacesCalculadoraJuros";
+import { JurosSimples } from "../src/core/JurosSimples";
+import { MENSAGENS_ERRO } from "../src/core/constants/MensagensErro";
+import { EntradasTempo, EntradasTaxa, EntradasCapital, EntradasJuros, EntradasMontante } from "../src/core/Util/InterfacesCalculadoraJuros";
 
 describe("Cenários para Juros Simples: ", () => {
 

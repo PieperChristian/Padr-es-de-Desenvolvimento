@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:calc": "ts-node frontend-calculadora/src/main.ts",
+    "start:calc": "ts-node src/main.ts",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },

@@ -197,7 +197,7 @@ Juros: R$ 1200.00
 Você também pode usar a lógica de negócio diretamente no seu código:
 
 ```typescript
-import { JurosSimples } from './frontend-calculadora/src/core/JurosSimples';
+import { JurosSimples } from './src/core/JurosSimples';
 
 // Calcular juros a partir de capital, taxa e tempo
 const juros = JurosSimples.jurosPorCapitalTaxaTempo({
@@ -238,9 +238,8 @@ try {
 
 ```text
 Calculadora-Financeira/
-├── frontend-calculadora/
-│   └── src/
-│       ├── core/                           # Lógica de negócio (Business Logic)
+├── src/
+│   ├── core/                           # Lógica de negócio (Business Logic)
 │       │   ├── README.md                   # 📖 Documentação do Core
 │       │   ├── JurosSimples.ts             # Classe com 15 métodos de cálculo
 │       │   ├── ValidadoresJuros.ts         # Validações de regras de negócio
@@ -345,7 +344,7 @@ Time:        0.812 s
 
 Cada módulo possui sua própria documentação completa:
 
-📘 **[Core - Lógica de Negócio](frontend-calculadora/src/core/README.md)**
+📘 **[Core - Lógica de Negócio](src/core/README.md)**
 
 - Fórmulas matemáticas de Juros Simples
 - 15 métodos de cálculo documentados
@@ -353,7 +352,7 @@ Cada módulo possui sua própria documentação completa:
 - Interfaces TypeScript
 - Exemplos de uso programático
 
-📗 **[Interface - CLI Interativa](frontend-calculadora/src/interface/README.md)**
+📗 **[Interface - CLI Interativa](src/interface/README.md)**
 
 - Arquitetura da interface
 - Fluxo de navegação
