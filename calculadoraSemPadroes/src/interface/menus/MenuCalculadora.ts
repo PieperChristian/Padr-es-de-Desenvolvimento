@@ -1,0 +1,93 @@
+import inquirer from 'inquirer';
+
+import { criarPromptConfirmacao, criarPromptMenu } from '../auxiliaresPrompts';
+import { MenuJuros } from './JurosMenu';
+import { MenuMontante } from './MontanteMenu';
+import { MenuCapital } from './CapitalMenu';
+import { MenuTaxa } from './TaxaMenu';
+import { MenuTempo } from './TempoMenu';
+
+export class CalculadoraMenu {
+
+    private juros: MenuJuros;
+    private montante: MenuMontante;
+    private capital: MenuCapital;
+    private taxa: MenuTaxa;
+    private tempo: MenuTempo;
+
+    constructor() {
+        this.juros = new MenuJuros(this);
+        this.montante = new MenuMontante(this);
+        this.capital = new MenuCapital(this);
+        this.taxa = new MenuTaxa(this);
+        this.tempo = new MenuTempo(this);
+    }
+
+    public async iniciar(): Promise<void> {
+        console.clear();
+        console.log("========================================");
+        console.log("    💰  CALCULADORA FINANCEIRA  💰");
+        console.log("========================================\n");
+
+        await this.menuPrincipal();
+    }
+
+
+    public async menuPrincipal(): Promise<void> {
+
+        const resposta = await inquirer.prompt([
+            // menu padrão via helper
+            criarPromptMenu(
+                'opcao',
+                'O que você deseja calcular?',
+                [
+                    'Juros',
+                    'Montante',
+                    'Capital',
+                    'Taxa',
+                    'Tempo',
+                    new inquirer.Separator(),
+                    'Sair'
+                ],
+                { raw: true }
+            )
+        ]);
+
+        switch (resposta.opcao) {
+            case 'Juros':
+                await this.juros.menuJuros();
+                break;
+            case 'Montante':
+                await this.montante.menuMontante();
+                break;
+            case 'Capital':
+                await this.capital.menuCapital();
+                break;
+            case 'Taxa':
+                await this.taxa.menuTaxa();
+                break;
+            case 'Tempo':
+                await this.tempo.menuTempo();
+                break;
+            case 'Sair':
+                console.log("Até logo! 👋");
+                process.exit(0);
+            default:
+                console.log("Opção inválida! Tente novamente.");
+                await this.menuPrincipal();
+        }
+    };
+
+    public async confirmarVoltaMenu(): Promise<void> {
+        const { voltar } = await inquirer.prompt([
+            criarPromptConfirmacao('voltar', 'Voltar ao menu principal?', true)
+        ]);
+
+        if (voltar) {
+            console.clear();
+            await this.menuPrincipal();
+        } else {
+            console.log("Até logo!");
+        }
+    };
+}

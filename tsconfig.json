@@ -17,5 +17,12 @@
     
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "test", "prof_codigos/CalculadoraJurosSimplesRefatorada.ts", "prof_codigos/ClaculadoraJurosSimplesRefatorada_test.ts"]
+  "include": [
+    "calculadoraSemPadroes/src/**/*", 
+    "calculadoraSemPadroes/test/**/*",
+    "calculadoraComPadroes/srcComPadroes/**/*", 
+    "calculadoraComPadroes/testComPadroes/**/*",
+    "prof_codigos/CalculadoraJurosSimplesRefatorada.ts", 
+    "prof_codigos/ClaculadoraJurosSimplesRefatorada_test.ts"
+  ]
 }

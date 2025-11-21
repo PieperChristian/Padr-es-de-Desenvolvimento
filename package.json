@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:calc": "ts-node src/main.ts",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "start:semPadroes": "ts-node calculadoraSemPadroes/src/main.ts",
+    "start:comPadroes": "ts-node calculadoraComPadroes/srcComPadroes/main.ts",
+    "test:semPadroes": "jest calculadoraSemPadroes",
+    "test:comPadroes": "jest calculadoraComPadroes",
+    "test:all": "jest",
+    "test:coverage:semPadroes": "jest --coverage calculadoraSemPadroes",
+    "test:coverage:comPadroes": "jest --coverage calculadoraComPadroes"
   },
   "keywords": [],
   "author": "",
