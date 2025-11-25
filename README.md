@@ -30,6 +30,8 @@ Sistema completo de cálculos financeiros desenvolvido em **TypeScript**, com in
 
 A **Calculadora Financeira** é uma aplicação educacional e profissional que oferece cálculos precisos de juros simples através de uma interface CLI (Command Line Interface) interativa. O projeto segue princípios sólidos de engenharia de software, com separação clara entre lógica de negócio e interface, validações em múltiplas camadas e cobertura completa de testes automatizados.
 
+[Acesse o material sobre Padrões de Desenvolvimento - Fachada](https://amusing-governor-c1a.notion.site/Padr-es-de-Desenvolvimento-a-fachada-2b6cbd874838807c9a69c11bf7232e22)
+
 ### 🌟 Diferenciais
 
 ✅ **Interface CLI Interativa** - Navegação intuitiva com [Inquirer.js](https://github.com/SBoudrias/Inquirer.js/)  
